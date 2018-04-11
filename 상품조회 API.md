@@ -31,7 +31,7 @@
     <li>open: 진열여부</li>
     <li>EAD: 재입고일</li>
     <li>inPackageEA: 패키지 입수량</li>
-    <li>tags: 상품 특이사항</li>
+	<li>tags: 상품 특이사항</li>
   </ul>
   
 </ul>
