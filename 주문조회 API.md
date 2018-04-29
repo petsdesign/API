@@ -101,7 +101,3 @@
 		-H 'pd_key: {발급받은 API key}'
 	</code>
 </pre>
-
-# 상품조회API
-# Request
-<p>URL: http://api.petsdesign.co.kr/goods[/{상품번호}]</p>
