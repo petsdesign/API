@@ -259,7 +259,7 @@
 | 105  | duplicate order                        | 중복주문 오류                                         |
 ```
 
-| First Header  | Second Header |
+| Code  | Error message |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
