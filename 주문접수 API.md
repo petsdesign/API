@@ -8,7 +8,7 @@
 # Response parameters
 
 <p>* data: 주문접수 정보 (JSON)</p>
-<code>
+```json
 	{
 		"oaType": "pettob','storefarm', 'emp', 'talkstore', 'mall'
 		"oaOrderNo": "123456",
@@ -29,7 +29,7 @@
 			}
 		]
 	}
-</code>
+```
 <p>
 	{OA타입} = 
 	<ul>
