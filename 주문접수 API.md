@@ -78,27 +78,27 @@
 
 ``` js
 {
-    "payResult": {
-        "successs": 0,
-        "payResultMsg": "order test :)",
-        "cashBalance": "4481889",
-        "payAmount": "7600"
+    "payResult": { //결제결과
+        "successs": 0, //성공여부 (1 => 성공, 0 => 실패)
+        "payResultMsg": "order test :)", //결제결과 메세지
+        "cashBalance": "0", //현재 캐쉬 잔액 (결제성공시에는 결제후 잔액)
+        "payAmount": "7600" //결제요청 금액
     },
-    "orderResult": {
-        "success": "1",
-        "ordno": "1525145229154",
-        "oa_type": "pettob",
-        "oa_api_ordno": "123456",
-        "nameReceiver": "펫츠디자인",
-        "zipcode": "",
-        "zonecode": "12345",
-        "address": "",
-        "road_address": "경기도 화성시 팔탄면 버들로 1362번길 10-12 펫츠디자인",
-        "orderGoods": "[테스트] 일반상품 외 2건",
-        "settleKind": "",
-        "settleprice": "7600",
-        "total_goodsprice": "5100",
-        "delivery": "2500"
+    "orderResult": { //주문접수 결과
+        "success": "1", //성공여부 (1 => 성공, 0 => 실패)
+        "ordno": "1525145229154", //주문번호
+        "oa_type": "pettob", //제휴처
+        "oa_api_ordno": "123456", //제휴처 주문번호
+        "nameReceiver": "펫츠디자인", //받는사람
+        "zipcode": "", //(구)우편번호
+        "zonecode": "12345", //(신)우편번호
+        "address": "", //지번주소
+        "road_address": "경기도 화성시 팔탄면 버들로 1362번길 10-12 펫츠디자인", //도로명주소
+        "orderGoods": "[테스트] 일반상품 외 2건", //주문상품내용 요약
+        "settleKind": "", //결제방법
+        "settleprice": "7600", //총 결제금액
+        "total_goodsprice": "5100", //총 상품금액
+        "delivery": "2500" //배송비
     }
 }
 ```
