@@ -11,31 +11,25 @@
 
 ``` js
 {
-  "hello": "world" // I want my comments!
+	"oaType": "pettob" // 제휴처 정보 pettob(일반주문), storefarm(스토어팜 주문), emp(EMP 주문), talkstore(톡스토어 주문), mall(자사몰 주문)
+	"oaOrderNo": "123456",
+	"nameReceiver": "홍수민",
+	"phoneReceiver": "010-2280-9802",
+	"mobileReceiver": "010-2280-9802",
+	"zipCode": "14575",
+	"address": "경기도 부천시 옥산로 16 (중동, 연화마을 건영캐스빌아파트) 1411동",
+	"address2": "1402호",
+	"settleKind": "a",
+	"bankSender": "올라펫",
+	"doubleCheck": "1",
+	"memo": ".강아지때문에 경비실에 맡기신 후 연락 부탁드립니다. 감사합니다.",
+	"orderItem": [
+		{
+			"goodsNo": 8409,
+			"ea": 1
+		}
+	]
 }
-```
-
-``` js
-	{
-		"oaType": "pettob','storefarm', 'emp', 'talkstore', 'mall'
-		"oaOrderNo": "123456",
-		"nameReceiver": "홍수민",
-		"phoneReceiver": "010-2280-9802",
-		"mobileReceiver": "010-2280-9802",
-		"zipCode": "14575",
-		"address": "경기도 부천시 옥산로 16 (중동, 연화마을 건영캐스빌아파트) 1411동",
-		"address2": "1402호",
-		"settleKind": "a",
-		"bankSender": "올라펫",
-		"doubleCheck": "1",
-		"memo": ".강아지때문에 경비실에 맡기신 후 연락 부탁드립니다. 감사합니다.",
-		"orderItem": [
-			{
-				"goodsNo": 8409,
-				"ea": 1
-			}
-		]
-	}
 ```
 <p>
 	{OA타입} = 
