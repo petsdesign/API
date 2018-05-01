@@ -33,7 +33,6 @@
     <li>inPackageEA: 패키지 입수량</li>
 	<li>tags: 상품 특이사항(SEPERATOR ",")</li>
   </ul>
-  
 </ul>
 
 ## 상품Tag 검색 ##
