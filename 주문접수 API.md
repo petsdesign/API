@@ -91,7 +91,7 @@
         "settleKind": "a", //결제방법
         "settlePrice": "7600", //총 결제금액
         "totalGoodsPrice": "5100", //총 상품금액
-        "delivery": "2500" //배송비,
+        "delivery": "2500", //배송비
         "memo": "부재시 경비실에 맡겨주세요!" //배송 메세지 (주문 테스트인경우 요청 파라미터가 삽입되어 리턴 됩니다.)
     },
     "payResult": { //결제결과
@@ -187,7 +187,37 @@
 }
 ```
 
-### 결제 실패시 (캐쉬부족) ###
+### 결제 성공시 ###
+
+``` js
+{
+    "orderResult": {
+        "success": "1",
+        "ordNo": "1525145229154",
+        "oaType": "api",
+        "oaApiOrdno": "123456",
+        "nameReceiver": "펫츠디자인",
+        "zipCode": "12345",
+        "address": "경기도 화성시 팔탄면 버들로 1362번길 10-12 펫츠디자인",
+        "orderGoods": "[테스트] 일반상품 외 2건",
+        "settleKind": "a",
+        "settlePrice": "7600",
+        "totalGoodsPrice": "5100",
+        "delivery": "2500",
+        "memo": "부재시 경비실에 맡겨주세요!" 
+    },
+    "payResult": {
+        "successs": 1,
+        "payResultMsg": "success",
+        "cashBalance": "10564",
+        "payAmount": "7600" 
+    }
+}
+```
+
+<p>테스트 주문의 경우 결제수단은 무통장 결제로 주문접수 처리 하기때문에 payResult 의 successs 값은 0 으로 리턴됩니다.</p>
+
+### 결제 실패시 (캐쉬결제 실패: 캐쉬부족) ###
 
 ``` js
 {
