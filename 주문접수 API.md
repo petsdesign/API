@@ -272,9 +272,37 @@
 </blockquote>
 <pre>
 	<code>
-		curl -X GET
-		http://api.petsdesign.co.kr/order/{주문번호}[/{OA타입}]
-		-H 'cache-control: no-cache'
-		-H 'pd_key: {발급받은 API key}'
+curl -X POST \
+  http://api.petsdesign.co.kr/order \
+  -H 'cache-control: no-cache' \
+  -H 'pd_key: {발급받은 API key}' \
+  -F 'data={
+	"oaType": null,
+	"oaOrderNo": "123456",
+	"nameReceiver": "펫츠디자인",
+	"phoneReceiver": "010-1234-5678",
+	"mobileReceiver": "010-1234-5678",
+	"zipCode": "12345",
+	"address": "경기도 화성시 팔탄면 버들로 1362번길 10-12",
+	"address2": "펫츠디자인",
+	"settleKind": "a",
+	"bankSender": "펫투비",
+	"doubleCheck": "1",
+	"memo": "부재시 경비실에 맡겨주세요!",
+	"orderItem":[
+		{
+			"goodsNo": 7373,
+			"ea": 1
+		},
+		{
+			"goodsNo": 10437,
+			"ea": 2
+		},
+		{
+			"goodsNo": 10438,
+			"ea": 3
+		}
+	]
+}'
 	</code>
 </pre>
