@@ -249,7 +249,7 @@
 
 ```
 Code  | Error message | 내용
-------------- | -------------
+------------- | ------------- | -------------
 001  | parameter required | 필수 파라미터
 002  | invalid argumen | 파라미터 형식 오류
 101  | must be 1 for checking your purchase | 구매확인 미동의로 인한 주문접수 불가
