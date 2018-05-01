@@ -247,6 +247,7 @@
 
 ## Error codes ##
 
+```
 Code  | Error message | 내용
 ------------- | -------------
 001  | parameter required | 필수 파라미터
@@ -256,6 +257,7 @@ Code  | Error message | 내용
 103  | items that can not be ordered | 구매 불가 상품 주문
 104  | request order items are not matched | 주문 상품 없음
 105  | duplicate order | 중복주문
+```
 
 
 ## Code sample ##
