@@ -1,11 +1,11 @@
 # 주문접수 API
 
-### Request (POST) ###
+## Request (POST) ##
 <p>주문 요청 URL: http://api.petsdesign.co.kr/order</p>
 <p>테스트 주문 요청URL: http://api.petsdesign.co.kr/order/test</p>
 <p>Require header: pd_key (해당키는 펫츠디자인 개발팀에 발급요청 하시기바랍니다. dev@petsdesign.co.kr)</p>
 
-### Response parameters ###
+## Response parameters ##
 
 <ul>
 	<li>data: 주문정보 (JSON 형식)</li>
@@ -72,7 +72,7 @@
 }
 ```
 
-### Response (JSON) ###
+## Response (JSON) ##
 <ul>
   <li>orderNo: 주문번호</li>
   <li>oaType: OA타입</li>
@@ -144,7 +144,7 @@
   
 </ul>
 
-### Code sample ###
+## Code sample ##
 <blockquote>
 	<p>cURL</p>
 </blockquote>
