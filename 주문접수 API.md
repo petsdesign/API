@@ -1,5 +1,5 @@
 # 주문접수 API
-- - - - 
+
 ## Request (POST) ##
 <p>주문 요청 URL: http://api.petsdesign.co.kr/order</p>
 <p>테스트 주문 요청URL: http://api.petsdesign.co.kr/order/test</p>
