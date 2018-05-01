@@ -259,6 +259,11 @@
 | 105  | duplicate order                        | 중복주문 오류                                         |
 ```
 
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 
 ## Code sample ##
 <blockquote>
