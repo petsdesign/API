@@ -8,7 +8,7 @@
 # Response parameters
 
 <ul>
-	<li>* data: 주문정보 (JSON 형식)</li>
+	<li>data: 주문정보 (JSON 형식)</li>
 </ul>
 
 ``` js
