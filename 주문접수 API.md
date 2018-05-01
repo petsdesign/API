@@ -7,26 +7,34 @@
 
 # Response parameters
 
-<p>* data: 주문접수 정보 (JSON)</p>
+<p>* data: 주문정보 (JSON 형식)</p>
 
 ``` js
 {
-	"oaType": "pettob" // 제휴처 정보 pettob(일반주문), storefarm(스토어팜 주문), emp(EMP 주문), talkstore(톡스토어 주문), mall(자사몰 주문)
-	"oaOrderNo": "123456",
-	"nameReceiver": "홍수민",
-	"phoneReceiver": "010-2280-9802",
-	"mobileReceiver": "010-2280-9802",
-	"zipCode": "14575",
-	"address": "경기도 부천시 옥산로 16 (중동, 연화마을 건영캐스빌아파트) 1411동",
-	"address2": "1402호",
-	"settleKind": "a",
-	"bankSender": "올라펫",
-	"doubleCheck": "1",
-	"memo": ".강아지때문에 경비실에 맡기신 후 연락 부탁드립니다. 감사합니다.",
-	"orderItem": [
+	"oaType": "pettob" // default: "pettob", 제휴처: pettob(일반주문), storefarm(스토어팜 주문), emp(EMP 주문), talkstore(톡스토어 주문), mall(자사몰 주문)
+	"oaOrderNo": "123456", // default: null, 제휴처 주문번호: null 값시 자동으로 생성되며, 중복주문 확인 또는 주문조회시 사용 됩니다.
+	"nameReceiver": "펫츠디자인", // 수령자: 2글자 이상의 수령자 이름 (필수)
+	"phoneReceiver": "010-1234-5678", // 수령자 전화번호1 (필수)
+	"mobileReceiver": "010-1234-5678", // 수령자 전화번호2 (필수)
+	"zipCode": "12345", // (구/신)우편번호: 5자리 이상의 구 우편번호 또는 신 우편번호 (필수)
+	"address": "경기도 화성시 팔탄면 버들로 1362번길 10-12", // (지번/도로명)주소: Daum 주소정재 API를 이용하기 때문에 가급적 신주소로 요청하시기 바랍니다. (필수)
+	"address2": "펫츠디자인", // 나머지 주소: 아파트명, 동, 호수 등 나머지 주소 (필수)
+	"settleKind": "a", // default: "a", 결제방식: a(무통장 입금), s(캐쉬결제)
+	"bankSender": "펫투비", // 입금자명: settleKind 파라미터가 "a" (무통장)인경우 필수
+	"doubleCheck": "1", // 구매동의: 구매하는 상품의 결제정보를 확인 하였으며, 구매진행의 동의여부 (1 => 동의, 0 => 동의하지 않음) *동의하지 않을경우 주문접수 불가 합니다.
+	"memo": "부재시 경비실에 맡겨주세요!", // default: null, 배송메세지: 최대 100글자
+	"orderItem": [ // 주문상품 정보 (필수)
 		{
-			"goodsNo": 8409,
+			"goodsNo": 7373,
 			"ea": 1
+		},
+		{
+			"goodsNo": 10437,
+			"ea": 2
+		},
+		{
+			"goodsNo": 10438,
+			"ea": 3
 		}
 	]
 }
