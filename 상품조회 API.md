@@ -1,6 +1,6 @@
 # 상품조회 API
 
-# Request (GET)
+## Request (GET) ##
 <p>URL: http://api.petsdesign.co.kr/goods/{상품번호} OR !{태그}[/{페이지번호}]</p>
 <p>Require header: pd_key (해당키는 펫츠디자인 개발팀에 발급요청 하시기바랍니다. dev@petsdesign.co.kr)</p>
 
@@ -8,7 +8,7 @@
 <p>* 전체상품 조회시 {상품번호} = "all" ex) http://api.petsdesign.co.kr/goods/all[/{페이지번호}]</p>
 <p>* 전체상품 조회시 페이징 처리가 되며, 한 페이지당 50개의 상품이 조회됩니다.</p>
 
-# Response (JSON)
+## Response (JSON) ##
 <ul>
   <li>total: 조회된 상품수</li>
   <li>totalPageCnt: 전체 페이지수</li>
@@ -36,7 +36,7 @@
   
 </ul>
 
-# 상품Tag 검색
+## 상품Tag 검색 ##
 
 http://api.petsdesign.co.kr/goods/!{태그}[/페이지번호]
 * 태그로 상품조회시 태그명 앞에 "!" 삽입
@@ -51,7 +51,7 @@ http://api.petsdesign.co.kr/goods/!{태그}[/페이지번호]
 	<li><code>!단가인상</code>: 단가인상 예정인 상품 입니다.</li>
 </ul>
 
-# Code sample
+## Code sample ##
 <blockquote>
 	<p>cURL</p>
 </blockquote>
