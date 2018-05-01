@@ -42,7 +42,7 @@
 	//무통장 결제인 경우, 주문접수만 처리 하고 캐쉬결제인 경우 주문접수후 캐쉬결제까지 처리합니다.
 	
 	"bankSender": "펫투비",  //[Conditional Required, string]
-	//입금자명: settleKind 파라미터가 "a" (무통장)인경우 Required
+	//입금자명: settleKind 파라미터가 "a" (무통장)인경우 필수
 	
 	"doubleCheck": "1", //[Required, int]
 	//구매동의: 구매하는 상품의 결제정보를 확인 하였으며, 구매진행의 동의여부 (1 => 동의, 0 => 동의하지 않음)
@@ -51,7 +51,7 @@
 	"memo": "부재시 경비실에 맡겨주세요!", [default: null, string]
 	//배송메세지: 최대 100글자
 	
-	"orderItem": [ //[Requiredm, array]
+	"orderItem": [ //[Required, array]
 	// 주문상품 정보
 		{
 			"goodsNo": 7373, //[Required, int]
