@@ -12,7 +12,7 @@
 ``` js
 {
 	"oaType": "pettob" //[default: "pettob]
-	//제휴처: pettob(일반주문), storefarm(스토어팜 주문), emp(EMP 주문), talkstore(톡스토어 주문), mall(자사몰 주문)
+	//제휴처: pettob(일반), storefarm(스토어팜), emp(EMP), talkstore(톡스토어), mall(자사몰)
 	
 	"oaOrderNo": "123456", //[default: null]
 	//제휴처 주문번호: null 인경우 자동으로 생성되며, 중복주문 확인 또는 주문조회시 사용 됩니다.
