@@ -215,7 +215,7 @@
 }
 ```
 
-<p>테스트 주문의 경우 결제수단은 무통장 결제로 주문접수 처리 하기때문에 payResult 의 successs 값은 0 으로 리턴됩니다.</p>
+<p>* 테스트 주문 또는 무통장으로 주문접수 할 경우 결제수단을 무통장 결제로 주문접수 처리 하기때문에 payResult 의 successs 값은 0 으로 리턴됩니다.</p>
 
 ### 결제 실패시 (캐쉬결제 실패: 캐쉬부족) ###
 
@@ -245,7 +245,17 @@
 }
 ```
 
+## Error codes ##
 
+Code  | Error message | 내용
+------------- | -------------
+001  | parameter required | 필수 파라미터
+002  | invalid argumen | 파라미터 형식 오류
+101  | must be 1 for checking your purchase | 구매확인 미동의로 인한 주문접수 불가
+102  | duplicate items are ordered | 주문상품중 중복으로 주문한 상품이 있음
+103  | items that can not be ordered | 구매 불가 상품 주문
+104  | request order items are not matched | 주문 상품 없음
+105  | duplicate order | 중복주문
 
 
 ## Code sample ##
