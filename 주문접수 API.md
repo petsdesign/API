@@ -103,6 +103,25 @@
 }
 ```
 
+### 주문접수 실패시 (parameters error) ###
+
+``` js
+{
+    "orderResult": {
+        "success": 0,
+        "errCode": "001",
+        "parameter": "nameReceiver",
+        "errMsg": "parameter required"
+    },
+    "payResult": {
+        "successs": 0,
+        "payResultMsg": "did not even try because order failed",
+        "cashBalance": "4481889",
+        "payAmount": 0
+    }
+}
+```
+
 
 ## Code sample ##
 <blockquote>
