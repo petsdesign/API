@@ -13,7 +13,7 @@
 
 ``` js
 {
-	"oaType": "pettob" //[default: "pettob, string]
+	"oaType": "pettob", //[default: "pettob, string]
 	//제휴처: pettob(일반), storefarm(스토어팜), emp(EMP), talkstore(톡스토어), mall(자사몰)
 	
 	"oaOrderNo": "123456", //[default: null, string]
@@ -41,7 +41,7 @@
 	//결제방식: "a" => (무통장), "s" => (캐쉬결제)
 	//무통장 결제인 경우, 주문접수만 처리 하고 캐쉬결제인 경우 주문접수후 캐쉬결제까지 처리합니다.
 	
-	"bankSender": "펫투비",  //[Conditional Required, string]
+	"bankSender": "펫투비", //[Conditional Required, string]
 	//입금자명: settleKind 파라미터가 "a" (무통장)인경우 필수
 	
 	"doubleCheck": "1", //[Required, int]
