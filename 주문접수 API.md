@@ -247,7 +247,7 @@
 
 ## Error codes ##
 
-
+#### 주문접수 Error codes ####
 | Code  | Error message | 내용 |
 | ------------- | ------------- | ------------- |
 | 001  | parameter required  | 필수 파라미터 오류   |
@@ -257,6 +257,13 @@
 | 103  | items that can not be ordered  | 구매 불가 상품 주문  |
 | 104  | request order items are not matched  | 주문 상품 없음  |
 | 105  | duplicate order  | 중복주문 오류  |
+| 201  | can not found matched goods  | 주문상품 찾을수 없음  |
+| 202  | invalid option  | 상품옵션 오류  |
+| 203  | invalid bundle order quantity  | 묶음주문 수량 오류  |
+| 204  | invalid min order quantity  | 최소 구매 수량 오류  |
+| 205  | invalid max order quantity  | 최대 구매 수량 오류  |
+| 206  | runout  | 주문상품 품절  |
+
 
 
 ## Code sample ##
