@@ -2,7 +2,7 @@
 
 # Request (POST)
 <p>주문 요청 URL: http://api.petsdesign.co.kr/order</p>
-<p>(테스트)주문 요청URL: http://api.petsdesign.co.kr/order/test</p>
+<p>테스트 주문 요청URL: http://api.petsdesign.co.kr/order/test</p>
 <p>Require header: pd_key (해당키는 펫츠디자인 개발팀에 발급요청 하시기바랍니다. dev@petsdesign.co.kr)</p>
 
 # Response parameters
@@ -71,18 +71,6 @@
 	]
 }
 ```
-
-
-<p>
-	{OA타입} = 
-	<ul>
-		<li>pettob: 펫투비 주문서</li>
-		<li>storefarm: 스토어팜 주문서</li>
-		<li>emp: EMP(Playauto) 주문서</li>
-		<li>talkstore: 톡스토어 주문서</li>
-		<li>mall: 자체운영몰 주문서</li>
-	</ul>
-</p>
 
 # Response (JSON)
 <ul>
