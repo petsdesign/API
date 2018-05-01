@@ -39,7 +39,7 @@
 	//결제방식: "a" => (무통장), "s" => (캐쉬결제)
 	//무통장 결제인 경우, 주문접수만 처리 하고 캐쉬결제인 경우 주문접수후 캐쉬결제까지 처리합니다.
 	
-	"bankSender": "펫투비",  //[조건부 Required]
+	"bankSender": "펫투비",  //[Conditional Required]
 	//입금자명: settleKind 파라미터가 "a" (무통장)인경우 Required
 	
 	"doubleCheck": "1", //[Required]
