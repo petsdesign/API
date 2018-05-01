@@ -13,8 +13,9 @@
 
 ``` js
 {
-	"oaType": "pettob", //[default: "pettob, string]
-	//제휴처: pettob(일반), storefarm(스토어팜), emp(EMP), talkstore(톡스토어), mall(자사몰)
+	"oaType": null, //[default: "api", string]
+	//제휴처: storefarm(스토어팜), emp(EMP), talkstore(톡스토어), mall(자사몰)
+	//제휴처별 주문관리를 위한 항목입니다. 제휴처 주문값이 없을경우 해당 파라미터 값을 null 또는 "api" 로 요청 합니다.
 	
 	"oaOrderNo": "123456", //[default: null, string]
 	//제휴처 주문번호: null 인경우 자동으로 생성되며, 중복주문 확인 또는 주문조회시 사용 됩니다.
@@ -87,7 +88,7 @@
     "orderResult": { //주문접수 결과
         "success": "1", //성공여부 (1 => 성공, 0 => 실패)
         "ordno": "1525145229154", //주문번호
-        "oa_type": "pettob", //제휴처
+        "oa_type": "api", //제휴처 (api => oAPI를 이용한 일반 펫투비 주문을 뜻함)
         "oa_api_ordno": "123456", //제휴처 주문번호
         "nameReceiver": "펫츠디자인", //받는사람
         "zipcode": "", //(구)우편번호
@@ -98,7 +99,8 @@
         "settleKind": "", //결제방법
         "settleprice": "7600", //총 결제금액
         "total_goodsprice": "5100", //총 상품금액
-        "delivery": "2500" //배송비
+        "delivery": "2500" //배송비,
+		"memo": "부재시 경비실에 맡겨주세요!" //배송 메세지 (주문 테스트인경우 해당 파라미터에 요청 파라미터가 삽입되어 리턴 됩니다.)
     }
 }
 ```
