@@ -86,7 +86,6 @@
 		<li>goodsPrice: 판매가격</li>
 		<li>orderCnt: 주문수량</li>
 	</ul>
-  
 </ul>
 
 ## Code sample ##
