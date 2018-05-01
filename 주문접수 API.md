@@ -79,12 +79,6 @@
 
 ``` js
 {
-    "payResult": { //결제결과
-        "successs": 0, //성공여부 (1 => 성공, 0 => 실패)
-        "payResultMsg": "order test :)", //결제결과 메세지
-        "cashBalance": "0", //현재 캐쉬 잔액 (결제성공시에는 결제후 잔액)
-        "payAmount": "7600" //결제요청 금액
-    },
     "orderResult": { //주문접수 결과
         "success": "1", //성공여부 (1 => 성공, 0 => 실패)
         "ordNo": "1525145229154", //주문번호
@@ -99,6 +93,12 @@
         "totalGoodsPrice": "5100", //총 상품금액
         "delivery": "2500" //배송비,
         "memo": "부재시 경비실에 맡겨주세요!" //배송 메세지 (주문 테스트인경우 요청 파라미터가 삽입되어 리턴 됩니다.)
+    },
+    "payResult": { //결제결과
+        "successs": 0, //성공여부 (1 => 성공, 0 => 실패)
+        "payResultMsg": "order test :)", //결제결과 메세지
+        "cashBalance": "0", //현재 캐쉬 잔액 (결제성공시에는 결제후 잔액)
+        "payAmount": "7600" //결제요청 금액
     }
 }
 ```
@@ -107,20 +107,113 @@
 
 ``` js
 {
-    "orderResult": {
-        "success": 0,
-        "errCode": "001",
-        "parameter": "nameReceiver",
-        "errMsg": "parameter required"
+    "orderResult": { //주문접수 결과
+        "success": 0, //성공여부 (1 => 성공, 0 => 실패)
+        "errCode": "001", //에러코드
+        "parameter": "nameReceiver", //에러 파라미터
+        "errMsg": "parameter required" //에러 메세지
     },
     "payResult": {
         "successs": 0,
         "payResultMsg": "did not even try because order failed",
-        "cashBalance": "4481889",
+        "cashBalance": "0",
         "payAmount": 0
     }
 }
 ```
+
+### 주문접수 실패시 (중복주문) ###
+
+{
+    "orderResult": {
+        "success": 0,
+        "errCode": "105",
+        "parameter": {
+            "oaOrderNo": "123456",
+            "dupOrderData": {
+                "ordNo": "1525150381173",
+                "oaOrderNo": "123456",
+                "nameReceiver": "펫츠디자인"
+            }
+        },
+        "errMsg": "duplicate order"
+    },
+    "payResult": {
+        "successs": 0,
+        "payResultMsg": "did not even try because order failed",
+        "cashBalance": "0",
+        "payAmount": 0
+    }
+}
+
+### 주문접수 실패시 (주문상품 오류: 주문상품 품절) ###
+
+``` js
+{
+    "payResult": {
+        "successs": 0,
+        "payResultMsg": "did not even try because order failed",
+        "cashBalance": "0",
+        "payAmount": 0,
+        "bankAccount": "1",
+        "bankSender": null
+    },
+    "orderResult": {
+        "success": "0",
+        "goodsData": {
+            "goodsNo": "7373", //상품번호
+            "goodsNm": "[테스트] 일반상품", //상품명
+            "categoryCode": "001", //카테고리 코드 (SEPERATOR: "|")
+            "categoryNm": "미분류(삭제X)", //카테고리 명 (SEPERATOR: "|")
+            "origin": "국산", //원산지
+            "maker": "테스트메이커", //제조사
+            "brand": "굿프랜드", //브랜드
+            "goodsPrice": "850", //상품가격
+            "suggestionSalesPrice": "1070", //제안 상품가격
+            "goodsDetail": "<img src=\"http://img.petsdesign.co.kr/pettob/desc/D170311007373_0.png\">", //상세정보
+            "goodsImage": "http://img.petsdesign.co.kr/pettob/goods/G170221007373_l.png", //상품이미지 (SEPERATOR: "|")
+            "goodsStock": "23", //재고
+            "runout": "1", //품절여부
+            "open": "1", //진열여부
+            "EAD": "", //입고예정일자
+            "inPackageEA": "100", //패키지 단위
+            "tags": "" //상품TAG
+        },
+        "errCode": "206", //에러코드
+        "errMsg": "runout" //에러 메세지
+    }
+}
+```
+
+### 결제 실패시 (캐쉬부족) ###
+
+``` js
+{
+    "orderResult": {
+        "success": "1",
+        "ordNo": "1525154725763",
+        "oaType": "api",
+        "oaApiOrdno": "123456",
+        "nameReceiver": "펫츠디자인",
+        "zipCode": "12345",
+        "address": "경기도 화성시 팔탄면 버들로 1362번길 10-12 펫츠디자인",
+        "orderGoods": "[테스트] 일반상품4 외 2건",
+        "settleKind": "s",
+        "settlePrice": "10006750",
+        "totalGoodsPrice": "10004250",
+        "delivery": "2500",
+        "memo": "부재시 경비실에 맡겨주세요!"
+    },
+    "payResult": {
+        "successs": 0,
+        "payResultMsg": "not enough cash",
+        "cashBalance": "0",
+        "payAmount": "10006750"
+    }
+}
+```
+
+
 
 
 ## Code sample ##
