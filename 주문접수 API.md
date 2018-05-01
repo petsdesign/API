@@ -247,28 +247,16 @@
 
 ## Error codes ##
 
-```
-| Code | Error message                          | 내용                                                  |
-|:----:|----------------------------------------|-------------------------------------------------------|
-| 001  | parameter required                     | 필수 파라미터 오류                                    |
-| 002  | invalid argument                       | 파라미터 형식 오류                                    |
-| 101  | must be "1" for checking your purchase | 구매 및 결제확인 동의하지 않음 으로인한 주문접수 불가 |
-| 102  | duplicate items are ordered            | 주문상품중 중복으로 주문한 상품이 있음                |
-| 103  | items that can not be ordered          | 구매 불가 상품 주문                                   |
-| 104  | request order items are not matched    | 주문 상품 없음                                        |
-| 105  | duplicate order                        | 중복주문 오류                                         |
-```
 
 | Code  | Error message | 내용 |
 | ------------- | ------------- | ------------- |
-| Content Cell  | Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  | Content Cell  |
+| 001  | parameter required  | 필수 파라미터 오류   |
+| 002  | invalid argument   | 파라미터 형식 오류  |
+| 101  | must be "1" for checking your purchase  | 구매 및 결제확인 동의하지 않음 으로인한 주문접수 불가  |
+| 102  | duplicate items are ordered   | 주문상품중 중복으로 주문한 상품이 있음  |
+| 103  | items that can not be ordered  | 구매 불가 상품 주문  |
+| 104  | request order items are not matched  | 주문 상품 없음  |
+| 105  | duplicate order  | 중복주문 오류  |
 
 
 ## Code sample ##
