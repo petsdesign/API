@@ -263,7 +263,7 @@
 | 204  | invalid min order quantity  | 최소 구매 수량 오류  |
 | 205  | invalid max order quantity  | 최대 구매 수량 오류  |
 | 206  | runout  | 주문상품 품절  |
-| 207  | Not enough stock  | 주문상품 재고부족  |
+| 207  | not enough stock  | 주문상품 재고부족  |
 
 
 
