@@ -14,7 +14,7 @@
 ``` js
 {
 	"oaType": null, //[default: "api", string]
-	//제휴처: storefarm(스토어팜), emp(EMP), talkstore(톡스토어), mall(자사몰)
+	//제휴처: storefarm(스토어팜), emp(EMP), talkstore(톡스토어), mall(자사몰), opo(자사상품발주)
 	//제휴처별 주문관리를 위한 항목입니다. 제휴처 주문값이 없을경우 해당 파라미터 값을 null 또는 "api" 로 요청 합니다.
 	
 	"oaOrderNo": "123456", //[default: null, string]
@@ -244,6 +244,23 @@
     }
 }
 ```
+
+## 자사상품 발주 ##
+
+<p>자사상품 발주시 oaType 파라미터의 값은 "opo" 입니다.</p>
+<p>
+	자사상품 발주시 요청 파라미터 값과 상관없이 고정값으로 요청됩니다.
+</p>
+
+| Parameter  | 값 |
+| ------------- | ------------- |
+| nameReceiver  | 주문자명  |
+| zipCode  | 물류센터 우편번호  |
+| address  | 물류센터 주소  |
+| address2  | 물류센터 주소2 |
+
+<p>자사상품 발주시 상품의 품절여부 및 재고여부와 상관없이 무조건 요청한 수량으로 주문접수 됩니다.</p>
+
 
 ## Error codes ##
 
