@@ -81,9 +81,21 @@
 	<ul>
 		<li>goodsNo: 상품고유번호</li>
 		<li>goodsNm: 상품명</li>
-		<li>makerNm: 제조사</li>
-		<li>brandNm: 브랜드</li>
+		<li>makerNm: 제조사</li> #Deprecated
+		<li>brandNm: 브랜드</li> #Deprecated
 		<li>goodsPrice: 판매가격</li>
+		<li>claimStatus: 클레임상태</li>
+			<li>orderClaimStatus: 주문클레임상태</li>
+				<ul>
+					<li>0: null</li>
+					<li>31: 추가발송</li>
+					<li>41: 취소접수</li>
+					<li>42: 취소진행</li>
+					<li>44: 취소완료</li>
+					<li>50: 결제시도</li>
+					<li>51: PG에러</li>
+					<li>54: 결제실패</li>
+				</ul>
 		<li>orderCnt: 주문수량</li>
 	</ul>
 </ul>
